@@ -1,17 +1,21 @@
 #!/bin/bash
 
-echo " enter the salary "
-read  salary
+echo "Enter the salary:"
+read salary
 
-if [ "$salary" -le 20000 ]
+if [ "$salary" -eq 20000 ]
  then
-    tax=0  
-elif [ $salary  -gt 20000  -a  $salary  -le 40000 ]
+    tax_percentage=2
+elif [ "$salary" -le 20000 ]
  then
-    tax=$((salary * 5 / 100)) 
+    tax_percentage=0
+elif [ "$salary" -gt 20000 -a "$salary" -le 40000 ]
+ then
+    tax_percentage=5
 else
-    tax=$((salary * 10 / 100)) 
+    tax_percentage=10
 fi
 
-echo "Tax: $tax"
+echo "Tax Percentage: $tax_percentage%"
+
 

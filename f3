@@ -10,6 +10,7 @@ echo "Select a mathematical operation:"
 echo "1. Addition"
 echo "2. Subtraction"
 echo "3. Multiplication"
+echo "4. Division"
 read  choice
 
 if [ "$choice" -eq 1 ]
@@ -24,8 +25,12 @@ elif [ "$choice" -eq 3 ]
  then
     result=$((num1 * num2))
     operation="Multiplication"
+elif [ "$choice" -eq 4 ]
+ then
+    result=$((num1 / num2))
+    operation="division"
 else
-    echo "Invalid choice. Please enter a valid choice (1/2/3)."
+    echo "Invalid choice. Please enter a valid choice (1/2/3/4)."
     exit 1
 fi
 
