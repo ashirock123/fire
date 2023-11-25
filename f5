@@ -13,4 +13,8 @@ else
     category="Adult"
 fi
 echo "Category: $category"
+if [ "$age" -gt 60 ]
+ then
+    echo "Old Age"
+fi
 
