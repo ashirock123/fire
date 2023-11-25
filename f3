@@ -1,0 +1,33 @@
+#!/bin/bash
+
+echo " enter a first  number "
+read num1
+
+echo " enter a second number "
+read  num2
+
+echo "Select a mathematical operation:"
+echo "1. Addition"
+echo "2. Subtraction"
+echo "3. Multiplication"
+read  choice
+
+if [ "$choice" -eq 1 ]
+then
+    result=$((num1 + num2))
+    operation="Addition"
+elif [ "$choice" -eq 2 ]
+ then
+    result=$((num1 - num2))
+    operation="Subtraction"
+elif [ "$choice" -eq 3 ]
+ then
+    result=$((num1 * num2))
+    operation="Multiplication"
+else
+    echo "Invalid choice. Please enter a valid choice (1/2/3)."
+    exit 1
+fi
+
+echo "$operation Result: $result"
+

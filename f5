@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo " enter the age "
+read age
+
+if [ $age  -ge 0  -a  $age  -lt 13 ]
+ then
+    category="Child"
+elif [ $age  -ge 13  -a  $age  -le 19 ]
+ then
+    category="Teenager"
+else
+    category="Adult"
+fi
+echo "Category: $category"
+
